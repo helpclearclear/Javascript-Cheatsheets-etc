@@ -1,13 +1,13 @@
 /*NOTES:
 quick function like [array.prototype.lister = (item) => {}] dson't let you use [this] command. e.g= list=this; doesn't work */
 
-//makeshift range() function
+//make-shift range() function
 function range(startAt = 0, size) {
     return [...Array(size).keys()].map(i => i + startAt);
 }
 
 
-//make shift print() function
+//make-shift print() function
 function print(msg){
     console.log(msg);
 }
@@ -84,4 +84,15 @@ Array.prototype.indexOf = function(item){
     }else{
         return true;
     }
+}
+
+//function to check if a number is an int or float:
+var isWhole = function(number){
+    item = String(number).includes(".")
+     return !item;
+}
+
+//function to combine and sort two arrays:
+var combine = function(arr1, arr2){
+    return arr1.concat(arr2).sort()
 }
