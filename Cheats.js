@@ -87,12 +87,11 @@ Array.prototype.indexOf = function(item){
 }
 
 //function to check if a number is an int or float:
-var isWhole = function(number){
+function isWhole(number){
     item = String(number).includes(".")
      return !item;
 }
-
 //function to combine and sort two arrays:
-var combine = function(arr1, arr2){
+function combine(arr1, arr2){
     return arr1.concat(arr2).sort()
 }
