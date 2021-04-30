@@ -101,3 +101,15 @@ function combine(arr1, arr2){
 function flipValue(val1, val2){
     return [val1, val2] = [val2, val1];
 }
+
+//To make a pure function, create a shallow copy of the data you will change inside of the function. you can use .slice() method to do this:
+
+Array.prototype.toString = function(){
+    var arr = this.slice();
+    for (var i of arr){i = String(i);}
+    return arr;
+}
+
+var array = [1, 2, 3, 4, 5]
+console.log(array.toString)//returns ["1", "2", "3", "4", "5"]
+console.log(array)//returns [1, 2, 3, 4, 5]
