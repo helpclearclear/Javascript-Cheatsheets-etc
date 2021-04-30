@@ -95,3 +95,9 @@ function isWhole(number){
 function combine(arr1, arr2){
     return arr1.concat(arr2).sort()
 }
+
+//function to flip the values of two variables:
+
+function flipValue(val1, val2){
+    return [val1, val2] = [val2, val1];
+}
