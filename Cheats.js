@@ -113,3 +113,14 @@ Array.prototype.toString = function(){
 var array = [1, 2, 3, 4, 5]
 console.log(array.toString)//returns ["1", "2", "3", "4", "5"]
 console.log(array)//returns [1, 2, 3, 4, 5]
+
+//Store a javascript dictionary in a json file:
+const storeData = (data, path) => {
+  try {
+    fs.writeFileSync(path, data)
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+storeData(JSON.stringify(dict), 'test.json')
